@@ -15,7 +15,7 @@ const connect = function() {
   );
 
  conn.on("data",(data) => console.log("server says ",data))
-
+ conn.on("connect", () => conn.write("Name: EMN"))
  
   return conn;
 }
